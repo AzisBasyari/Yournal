@@ -23,10 +23,14 @@ class Catatan extends Model
     // ];
 
     protected $guarded = [
-        // 'id_catatan'
+        'id'
     ];
     
     public function user(){
         return $this->belongsTo(User::class);
+    }
+
+    public function log(){
+        return $this->hasMany(Log::class);
     }
 }

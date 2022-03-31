@@ -47,6 +47,11 @@
                             id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
                             role="tab" aria-controls="pills-profile" aria-selected="false">Profil</button>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link border border-primary border-2 rounded-pill fs-14 text-center me-3"
+                            id="pills-log-tab" data-bs-toggle="pill" data-bs-target="#pills-log" type="button"
+                            role="tab" aria-controls="pills-log" aria-selected="false">Log</button>
+                    </li>
                 </ul>
             </div>
             <div class="tab-content" id="pills-tabContent">
@@ -58,6 +63,9 @@
                     @include('manage')</div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     @include('profile')
+                </div>
+                <div class="tab-pane fade" id="pills-log" role="tabpanel" aria-labelledby="pills-log-tab">
+                    @include('log')
                 </div>
             </div>
         </div>
