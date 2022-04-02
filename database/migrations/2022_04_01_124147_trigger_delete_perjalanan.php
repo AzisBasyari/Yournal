@@ -14,24 +14,24 @@ return new class extends Migration
      */
     public function up()
     {
-        DB::unprepared("CREATE TRIGGER add_catatan AFTER INSERT ON catatans FOR EACH ROW
+        DB::unprepared("CREATE TRIGGER delete_catatan BEFORE DELETE ON catatans FOR EACH ROW
             BEGIN
                 INSERT INTO logs (logs.user_id, logs.aktivitas, logs.nama_tempat, logs.alamat, logs.tanggal_perjalanan, logs.jam_perjalanan, logs.suhu_tubuh, logs.deskripsi, logs.nama_tempat_lama, logs.alamat_lama, logs.tanggal_perjalanan_lama, logs.jam_perjalanan_lama, logs.suhu_tubuh_lama, logs.deskripsi_lama, logs.created_at, logs.updated_at)
                 VALUES (
-                    NEW.user_id,
-                    'Menambahkan Catatan Baru',
-                    NEW.nama_tempat,
-                    NEW.alamat,
-                    NEW.tanggal_perjalanan,
-                    NEW.jam_perjalanan,
-                    NEW.suhu_tubuh,
-                    NEW.deskripsi,
+                    OLD.user_id,
+                    'Menghapus Catatan',
                     null,
                     null,
                     null,
                     null,
                     null,
                     null,
+                    OLD.nama_tempat,
+                    OLD.alamat,
+                    OLD.tanggal_perjalanan,
+                    OLD.jam_perjalanan,
+                    OLD.suhu_tubuh,
+                    OLD.deskripsi,
                     now(),
                     now()
                 );
@@ -45,6 +45,6 @@ return new class extends Migration
      */
     public function down()
     {
-        DB::unprepared('DROP TRIGGER add_catatan');
+        DB::unprepared('DROP TRIGGER delete_catatan');
     }
 };

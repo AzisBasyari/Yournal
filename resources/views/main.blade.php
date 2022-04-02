@@ -44,28 +44,31 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link border border-primary border-2 rounded-pill fs-14 text-center me-3"
-                            id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
-                            role="tab" aria-controls="pills-profile" aria-selected="false">Profil</button>
+                            id="pills-log-tab" data-bs-toggle="pill" data-bs-target="#pills-log" type="button"
+                            role="tab" aria-controls="pills-log" aria-selected="false">Log</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link border border-primary border-2 rounded-pill fs-14 text-center me-3"
-                            id="pills-log-tab" data-bs-toggle="pill" data-bs-target="#pills-log" type="button"
-                            role="tab" aria-controls="pills-log" aria-selected="false">Log</button>
+                            id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
+                            role="tab" aria-controls="pills-profile" aria-selected="false">Profil</button>
                     </li>
                 </ul>
             </div>
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                    @include('home')</div>
+                    @include('home')
+                </div>
                 <div class="tab-pane fade" id="pills-create" role="tabpanel" aria-labelledby="pills-create-tab">
-                    @include('create')</div>
+                    @include('create')
+                </div>
                 <div class="tab-pane fade" id="pills-manage" role="tabpanel" aria-labelledby="pills-manage-tab">
-                    @include('manage')</div>
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    @include('profile')
+                    @include('manage')
                 </div>
                 <div class="tab-pane fade" id="pills-log" role="tabpanel" aria-labelledby="pills-log-tab">
                     @include('log')
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    @include('profile')
                 </div>
             </div>
         </div>

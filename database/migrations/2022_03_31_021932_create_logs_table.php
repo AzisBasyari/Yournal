@@ -17,9 +17,19 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->unsignedBigInteger('catatan_id');
-            $table->foreign('catatan_id')->references('id')->on('catatans')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('aktivitas');
+            $table->string('nama_tempat')->nullable();
+            $table->string('alamat')->nullable();
+            $table->date('tanggal_perjalanan')->nullable();
+            $table->time('jam_perjalanan')->nullable();
+            $table->float('suhu_tubuh')->nullable();
+            $table->text('deskripsi')->nullable();
+            $table->string('nama_tempat_lama')->nullable();
+            $table->string('alamat_lama')->nullable();
+            $table->date('tanggal_perjalanan_lama')->nullable();
+            $table->time('jam_perjalanan_lama')->nullable();    
+            $table->float('suhu_tubuh_lama')->nullable();
+            $table->text('deskripsi_lama')->nullable();
             $table->timestamps();
         });
     }

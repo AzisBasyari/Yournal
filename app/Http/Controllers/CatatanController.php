@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Log;
 use App\Models\Catatan;
 use Illuminate\Http\Request;
 
@@ -64,4 +65,13 @@ class CatatanController extends Controller
         
 
     }
+
+    public function destroyLogs(Log $log){
+        if(Log::destroy($log->id)){   
+            return redirect(route('main'))->with('delete-log-success', 'Log Berhasil Dihapus!');
+        } else {
+            return redirect(route('main'))->with('delete-log-error', 'Log Gagal Dihapus!');
+        }
+    }
+
 }
