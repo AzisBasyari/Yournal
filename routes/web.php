@@ -37,6 +37,9 @@ Route::middleware('auth')->group(function(){
     Route::post('/manage-catatan/delete/{catatan:id}', [CatatanController::class, 'destroy']);
     Route::post('/manage-catatan/edit/{catatan:id}', [CatatanController::class, 'update']);
 
+    //Log
+    Route::post('/delete-log/{log:id}', [CatatanController::class, 'destroyLogs']);
+
     //Profil
     Route::post('/profile/edit/{user:nik}', [ProfileController::class, 'update']);
     Route::post('/profile/edit-password', [ProfileController::class, 'updatePassword']);
