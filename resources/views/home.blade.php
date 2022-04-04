@@ -31,7 +31,7 @@
                         <h1 class="card-title fs-36 mb-0">{{ $catatan->nama_tempat }}</h1>
                         <div class="fs-sans">
                             <p class="card-text"><small class="text-muted">{{ date('d F Y', strtotime($catatan->tanggal_perjalanan)) }} | {{ date('H : i', strtotime($catatan->jam_perjalanan)) }} | Suhu Tubuh: {{ $catatan->suhu_tubuh }}&#176;</small></p>
-                            <p class="card-text pb-5 text-justify">{{ Str::limit($catatan->deskripsi, 500)}}</p>
+                            <p class="card-text pb-5 text-justify">{{ Str::limit(strip_tags($catatan->deskripsi, 500))}}</p>
                             <div class="position-relative">
                                 <div class="position-absolute bottom-0 start-0">
                                     <a class="btn btn-primary rounded-pill text-light"  href="/catatan-{{ $catatan->id }}" role="button">

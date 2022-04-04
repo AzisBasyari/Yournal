@@ -36,7 +36,7 @@
             </div>
             <div class="mb-3">
                 <input id="deskripsi" type="hidden" name="deskripsi">
-                <trix-editor input="deskripsi" style="height: 50vh"></trix-editor>
+                <trix-editor input="deskripsi"></trix-editor>
             </div>
             <div class="mb-5 d-flex justify-content-end">
                 <button type="submit" class="btn btn-primary rounded-pill text-white px-5 py-2">Buat</button>
