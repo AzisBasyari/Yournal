@@ -19,8 +19,6 @@ class CatatanController extends Controller
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['deskripsi'] = strip_tags($request->deskripsi);
-
         
         if(Catatan::create($validatedData)){   
             return redirect(route('main'))->with('create-success', 'Catatan Perjalanan Berhasil Ditambahkan!');
@@ -54,8 +52,7 @@ class CatatanController extends Controller
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['deskripsi'] = strip_tags($request->deskripsi);
-        // dd($validatedData);
+
         if(Catatan::where('id', $catatan->id)->update($validatedData))
         {
             return redirect(route('main'))->with('update-success', 'Catatan Perjalanan Berhasil Diperbaharui!');

@@ -43,6 +43,9 @@ Route::middleware('auth')->group(function(){
     //Profil
     Route::post('/profile/edit/{user:nik}', [ProfileController::class, 'update']);
     Route::post('/profile/edit-password', [ProfileController::class, 'updatePassword']);
+
+    //Export
+    Route::post('/main/export', [HomeController::class, 'export'])->name('export');
 });
 
 
