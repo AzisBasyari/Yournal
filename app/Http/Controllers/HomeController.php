@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Log;
 use App\Models\Catatan;
 use Illuminate\Http\Request;
+use App\Exports\CatatanExport;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 
 class HomeController extends Controller
 {
@@ -32,6 +34,10 @@ class HomeController extends Controller
             "title" => "YOURNAL",
             "catatan" => $catatan
         ]);
+    }
 
+    public function export()
+    {
+        return Excel::download(new CatatanExport, 'CatatanPerjalanan.xlsx');
     }
 }

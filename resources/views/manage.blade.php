@@ -19,7 +19,15 @@
 @endif
 
 <section class="mt-5">
-    <h1 class="fs-36">Kelola catatan</h1>
+    <div class="d-flex justify-content-between">
+        <h1 class="fs-36">Kelola catatan</h1>
+        <form action="{{ route('export') }}" method="post">        
+            @csrf
+            <button type="submit" class="btn btn-primary rounded-pill px-4 text-white">
+                Ekspor seluruh catatan
+            </button>
+        </form>
+    </div>
     <form action="/main" method="get">
         @csrf
         <div class="row mt-3">
@@ -119,7 +127,7 @@
                         data-bs-jam="{{ $catatan->jam_perjalanan }}"
                         data-bs-alamat="{{ $catatan->alamat }}"
                         data-bs-suhu="{{ $catatan->suhu_tubuh }}"
-                        data-bs-deskripsi="{{ $catatan->deskripsi }}">
+                        data-bs-deskripsi="{!! $catatan->deskripsi !!}">
                             <img src="https://img.icons8.com/material-rounded/24/80B5DF/edit.png">
                         </button>
                     </td>
@@ -184,7 +192,7 @@
                     </div>
                     <div class="container mb-3">
                         <input id="deskripsi" type="hidden" name="deskripsi">
-                        <trix-editor input="deskripsi" id="deskripsi-trix" style="height: 50vh"></trix-editor>
+                        <trix-editor input="deskripsi" id="deskripsi-trix"></trix-editor>
                     </div>
             </div>
             <div class="modal-footer">
