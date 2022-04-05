@@ -19,9 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col-2">
-                <div class="card bg-primary p-2 pb-0 mt-0" style="width: 10rem; border-radius: 50rem 50rem 5rem 5rem">
-                    <img src="assets/gengar.png" alt="">
-                </div>
+                <img src="assets/typewriter-animate.svg" alt="">
             </div>
             <div class="col">
                 <h1 class="fs-24 fs-sans">Selamat Datang</h1>

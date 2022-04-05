@@ -127,7 +127,7 @@
                         data-bs-jam="{{ $catatan->jam_perjalanan }}"
                         data-bs-alamat="{{ $catatan->alamat }}"
                         data-bs-suhu="{{ $catatan->suhu_tubuh }}"
-                        data-bs-deskripsi="{!! $catatan->deskripsi !!}">
+                        data-bs-deskripsi="{{   $catatan->deskripsi   }}">
                             <img src="https://img.icons8.com/material-rounded/24/80B5DF/edit.png">
                         </button>
                     </td>

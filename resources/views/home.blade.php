@@ -23,9 +23,9 @@
         @foreach($catatans as $catatan)
         <div class="card mb-3" style="max-width: 100%; border: none">
             <div class="row g-0">
-                <div class="col-md-4">
+                {{-- <div class="col-md-4">
                     <img src="assets/home.svg" class="img-fluid rounded-start" alt="...">
-                </div>
+                </div> --}}
                 <div class="col-md-8">
                     <div class="card-body">
                         <h1 class="card-title fs-36 mb-0">{{ $catatan->nama_tempat }}</h1>
