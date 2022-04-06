@@ -33,6 +33,7 @@ Route::middleware('auth')->group(function(){
 
     //Catatan
     Route::get('/catatan-{catatan:id}', [HomeController::class, 'catatan'])->name('catatan');
+    Route::get('/detail-log/log-{log:id}', [HomeController::class, 'detailLog']);
     Route::post('/manage-catatan', [CatatanController::class, 'store']);
     Route::post('/manage-catatan/delete/{catatan:id}', [CatatanController::class, 'destroy']);
     Route::post('/manage-catatan/edit/{catatan:id}', [CatatanController::class, 'update']);

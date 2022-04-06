@@ -20,7 +20,7 @@ class HomeController extends Controller
 
         return view('main', [
             "title" => "YOURNAL",
-            "catatans" => $catatan->paginate(5, ['*'], 'home'),
+            "catatans" => $catatan->orderBy('id', 'desc')->paginate(5, ['*'], 'home'),
             "posts" => $catatan->order(request(['filter', 'order']))->search(request(['search']))->paginate(10, ['*'], 'manage'),
             "logs" => $logs,
             "no" => 1,
@@ -34,6 +34,13 @@ class HomeController extends Controller
         return view('catatan', [
             "title" => "YOURNAL",
             "catatan" => $catatan
+        ]);
+    
+    }
+    public function detailLog(Log $log){
+        return view('detail_log', [
+            "title" => "YOURNAL",
+            "log" => $log
         ]);
     }
 

@@ -133,16 +133,13 @@
                     </td>
                     <td class="text-center">
                         <form action="/manage-catatan/delete/{{ $catatan->id }}" method="POST">
-                            {{-- @method('delete') --}}
                             @csrf
-                            {{-- <input type="hidden" name="delete" value="{{ $catatan->id }}"> --}}
                             <button type="submit" class="btn p-0 m-0">
                                 <img src="https://img.icons8.com/material-rounded/24/80B5DF/trash.png">
                             </button>
                         </form>
                     </td>
                 </tr>
-                {{-- {{ dd($catatan) }} --}}
             @endforeach
         </tbody>
     </table>
@@ -245,9 +242,9 @@
         // console.log(this);
     });
 
-    $(document).ready(function() {
-        $("#deskripsi-trix").on("change", function(){
-            console.log($(this));
-        });
-    });
+    // $(document).ready(function() {
+    //     $("#deskripsi-trix").on("change", function(){
+    //         console.log($(this));
+    //     });
+    // });
 </script>
