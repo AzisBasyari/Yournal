@@ -112,7 +112,7 @@
                     <td class="text-center">{{ date('d F Y', strtotime($catatan->tanggal_perjalanan)) }}</td>
                     <td class="text-center">{{ date('H : i', strtotime($catatan->jam_perjalanan)) }}</td>
                     <td>{{ $catatan->nama_tempat }}</td>
-                    <td>{{ $catatan->alamat }}</td>
+                    <td>{{ Str::limit($catatan->alamat, 30) }}</td>
                     <td class="text-center">{{ $catatan->suhu_tubuh }}&#176;</td>
                     <td class="text-center">
                         <a href="/catatan-{{ $catatan->id }}" role="button">
@@ -127,7 +127,7 @@
                         data-bs-jam="{{ $catatan->jam_perjalanan }}"
                         data-bs-alamat="{{ $catatan->alamat }}"
                         data-bs-suhu="{{ $catatan->suhu_tubuh }}"
-                        data-bs-deskripsi="{{   $catatan->deskripsi   }}">
+                        data-bs-deskripsi="{{  $catatan->deskripsi  }}">
                             <img src="https://img.icons8.com/material-rounded/24/80B5DF/edit.png">
                         </button>
                     </td>
@@ -191,8 +191,8 @@
                                 id="suhu" placeholder="Suhu Tubuh (Celcius)">
                     </div>
                     <div class="container mb-3">
-                        <input id="deskripsi" type="hidden" name="deskripsi">
-                        <trix-editor input="deskripsi" id="deskripsi-trix"></trix-editor>
+                        <input id="deskripsi-edit" type="hidden" name="deskripsi">
+                        <trix-editor input="deskripsi-edit" id="deskripsi-trix"></trix-editor>
                     </div>
             </div>
             <div class="modal-footer">
@@ -229,7 +229,7 @@
         var alamat_input = exampleModal.querySelector("#alamat");
         var suhu_input = exampleModal.querySelector("#suhu");
         var deskripsi_trix_input = exampleModal.querySelector("#deskripsi-trix");
-        var deskripsi_input = exampleModal.querySelector("#deskripsi");
+        var deskripsi_input = exampleModal.querySelector("#deskripsi-edit");
 
         var url_edit = `/manage-catatan/edit/${id}`;
 
@@ -240,6 +240,14 @@
         alamat_input.value = alamat
         suhu_input.value = suhu
         deskripsi_trix_input.value = deskripsi
-        deskripsi_input.value = deskripsi
+        // deskripsi_input.value = "Testing Input Deskripsi"
+
+        // console.log(this);
+    });
+
+    $(document).ready(function() {
+        $("#deskripsi-trix").on("change", function(){
+            console.log($(this));
+        });
     });
 </script>

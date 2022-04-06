@@ -4,14 +4,24 @@
     <link rel="stylesheet" href="css/index.css">
 @endsection
 
-{{-- @section('button-navbar')
-    <button type="button" class="btn btn-light rounded-pill px-5 py-2 my-0 fs-14 fs-sans" data-bs-toggle="modal"
-        data-bs-target="#login">Masuk</button>
-@endsection --}}
-
-
 @section('content')
     <section class="container" id="title">
+        @if (session()->has('register-success'))
+            <div class="alert alert-primary fade show d-flex justify-content-between" role="alert">
+                {{ session('register-success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @elseif(session()->has('register-error'))
+            <div class="alert alert-primary fade show d-flex justify-content-between" role="alert">
+                {{ session('register-error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @elseif (session()->has('login-error'))
+            <div class="alert alert-primary fade show d-flex justify-content-between" role="alert">
+                {{ session('login-error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="row row-cols-2">
             <div class="col">
                 <h1 class="fs-72">{{ $title }}</h1>
@@ -40,7 +50,8 @@
         </div>
         <div class="row">
             <div class="col">
-                <div class="card mx-auto text-center bg-primary fs-sans text-light py-4" style="height: 80vh; width: 28vw; border-radius: 50px; box-shadow: 10px 20px 10px 0 rgba(128, 181, 223, 0.5);">
+                <div class="card mx-auto text-center bg-primary fs-sans text-light py-4"
+                    style="height: 80vh; width: 28vw; border-radius: 50px; box-shadow: 10px 20px 10px 0 rgba(128, 181, 223, 0.5);">
                     <div class="card-body">
                         <h1 class="fs-24 card-title">
                             <strong>
@@ -83,11 +94,11 @@
                     </div>
                     <div class="col align-self-center text-end ">
                         <h1 class="fs-48 mb-3">Mulailah mencatat dari sekarang!</h1>
-                        <button type="button" class="btn btn-light rounded-pill fs-sans" style="width: 100%" data-bs-toggle="modal"
-                            data-bs-target="#login">Masuk</button>
+                        <button type="button" class="btn btn-light rounded-pill fs-sans" style="width: 100%"
+                            data-bs-toggle="modal" data-bs-target="#login">Masuk</button>
                         <p class="fs-14 text-center my-3">Atau</p>
-                        <button type="button" class="btn btn-light rounded-pill fs-sans" style="width: 100%" data-bs-toggle="modal"
-                            data-bs-target="#register">Daftar sebagai
+                        <button type="button" class="btn btn-light rounded-pill fs-sans" style="width: 100%"
+                            data-bs-toggle="modal" data-bs-target="#register">Daftar sebagai
                             pengguna baru</button>
                     </div>
                 </div>
@@ -149,7 +160,7 @@
                             <div class="container mb-3">
                                 <p class="fs-14 mb-0">NIK</p>
                                 <input type="text" class="form-control" id="nik" name='nik'
-                                    placeholder="Masukkan NIK anda"> 
+                                    placeholder="Masukkan NIK anda">
                             </div>
                             <div class="container mb-3">
                                 <p class="fs-14 mb-0">Nama Lengkap</p>
@@ -159,8 +170,8 @@
                             <div class="container mb-3">
                                 <p class="fs-14 mb-0">Kata Sandi</p>
                                 <div class="input-group">
-                                    <input type="password" name="password" class="form-control password" id="passwordRegister"
-                                        placeholder="Masukkan kata sandi anda">
+                                    <input type="password" name="password" class="form-control password"
+                                        id="passwordRegister" placeholder="Masukkan kata sandi anda">
                                     <span class="input-group-text">
                                         <button type="button" class="btn btn-sm p-0"><img
                                                 src="https://img.icons8.com/material-rounded/24/80B5DF/hide.png"
@@ -168,6 +179,7 @@
                                         {{-- <i class="bi bi-eye-slash input-group-text" id="togglePassword"></i> --}}
                                     </span>
                                 </div>
+                                <span class="text-danger">*Kata sandi minimal 8 karakter</span>
                             </div>
                             <div class="container">
                                 <p class="fs-14 mb-0">Konfirmasi Kata Sandi</p>

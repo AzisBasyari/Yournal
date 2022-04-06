@@ -23,7 +23,8 @@ class HomeController extends Controller
             "catatans" => $catatan->paginate(5, ['*'], 'home'),
             "posts" => $catatan->order(request(['filter', 'order']))->search(request(['search']))->paginate(10, ['*'], 'manage'),
             "logs" => $logs,
-            "no" => 1
+            "no" => 1,
+            "tags" => array("b", "br", "em", "/em",  "hr", "i", "li", "/li", "ol", "/ol", "p", "/p", "s", "span", "table", "tr", "td", "u", "ul", "/ul", "blockquote", "/blockquote", "strong", "/strong", "h1", "/h1", "del", "/del", "a", "/a")
         ]);
 
         
@@ -38,6 +39,6 @@ class HomeController extends Controller
 
     public function export()
     {
-        return Excel::download(new CatatanExport, 'CatatanPerjalanan.xlsx');
+        return Excel::download(new CatatanExport, 'CatatanPerjalanan_' . auth()->user()->nama_lengkap . '.xlsx');
     }
 }

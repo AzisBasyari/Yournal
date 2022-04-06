@@ -72,32 +72,32 @@
                             <div class="modal-body">
                                     <div class="container mb-3">
                                         <p class="fs-14 mb-0">Tanggal Perjalanan</p>
-                                        <input type="text" class="form-control" id="tanggalLog" name='tanggal_perjalanan'
+                                        <input type="text" class="form-control" id="tanggalLog" name='tanggalLog'
                                             placeholder="" disabled>
                                     </div>
                                     <div class="container mb-3">
                                         <p class="fs-14 mb-0">Jam</p>
-                                        <input type="text" class="form-control" id="jamLog" name="jam_perjalanan"
+                                        <input type="text" class="form-control" id="jamLog" name="jamLog"
                                             placeholder="Jam" >
                                     </div>
                                     <div class="container mb-3">
                                         <p class="fs-14 mb-0">Nama Tempat</p>
-                                            <input type="text" name="nama_tempat" class="form-control password"
+                                            <input type="text" name="tempatLog" class="form-control password"
                                                 id="tempatLog" placeholder="Nama tempat" disabled>
                                     </div>
                                     <div class="container mb-3">
                                         <p class="fs-14 mb-0">Alamat</p>
-                                            <input type="text" name="alamat" class="form-control password"
+                                            <input type="text" name="alamatLog" class="form-control password"
                                                 id="alamatLog" placeholder="Nama tempat" disabled>
                                     </div>
                                     <div class="container mb-3">
                                         <p class="fs-14 mb-0">Suhu Tubuh</p>
-                                            <input type="text" name="suhu_tubuh" class="form-control password"
+                                            <input type="text" name="suhuLog" class="form-control password"
                                                 id="suhuLog" placeholder="Suhu Tubuh (Celcius)" disabled>
                                     </div>
                                     <div class="container mb-3">
                                         <p class="fs-14 mb-0">Deskripsi</p>
-                                        <input type="text" name="deskripsi" class="form-control password"
+                                        <input type="text" name="deskripsiLog" class="form-control password"
                                                 id="deskripsiLog" placeholder="Suhu Tubuh (Celcius)" disabled>
                                     </div>
                             </div>

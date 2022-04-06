@@ -22,7 +22,7 @@ return new class extends Migration
             $table->date('tanggal_perjalanan');
             $table->time('jam_perjalanan');
             $table->float('suhu_tubuh');
-            $table->text('deskripsi');
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
     }

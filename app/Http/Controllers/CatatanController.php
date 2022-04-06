@@ -48,10 +48,10 @@ class CatatanController extends Controller
             'tanggal_perjalanan' => 'required',
             'jam_perjalanan' => 'required',
             'suhu_tubuh' => 'required',
-            'deskripsi' => 'required',
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
+        $validatedData['deskripsi'] = $request->deskripsi;
 
         if(Catatan::where('id', $catatan->id)->update($validatedData))
         {

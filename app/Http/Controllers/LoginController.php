@@ -25,7 +25,7 @@ class LoginController extends Controller
             return redirect()->intended('main');
 
         }else{
-            return back()->with('loginError', 'Login Gagal!');
+            return back()->with('login-error', 'Login gagal! Silakan periksa kembali data yang anda masukkan');
         }
 
     }

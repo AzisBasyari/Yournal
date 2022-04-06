@@ -17,9 +17,13 @@ class RegisterController extends Controller
         ]);
            
         $data = $request->all();
-        $check = $this->create($data);
+
+        if($check = $this->create($data)){
+            return redirect("/")->with('register-success', 'Registrasi telah berhasil, silakan lakukan login!');
+        } else {
+            return redirect("/")->with('register-error', 'Registrasi gagal, silakan lakukan registrasi ulang!');
+        }
          
-        return redirect("/");
     }
 
     public function create(array $data){
