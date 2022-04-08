@@ -1,18 +1,3 @@
-{{-- @extends('layouts.master')
-
-@section('css')
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/navbar.css">
-@endsection --}}
-
-{{-- @section('button-navbar')
-    <button class="btn btn-light text-dark rounded-pill fs-sans px-5 py-2 my-0 fs-14">
-      Keluar
-    </button>
-@endsection --}}
-{{-- @section('content')
-    @include('layouts.header') --}}
-
 <section class="mt-5">
     <h1 class="fs-36">Catatan Terbaru</h1>
     {{-- | <a href="#" class="fs-24 text-black-50 fs-sans text-decoration-none">Catatan yang dibintangi</a></h1> --}}

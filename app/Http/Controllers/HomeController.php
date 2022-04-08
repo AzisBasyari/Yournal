@@ -32,6 +32,13 @@ class HomeController extends Controller
             "title" => "YOURNAL",
             "catatan" => $catatan
         ]);
+    
+    }
+    public function detailLog(Log $log){
+        return view('detail_log', [
+            "title" => "YOURNAL",
+            "log" => $log
+        ]);
     }
 
     public function export()
