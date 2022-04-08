@@ -15,7 +15,7 @@ class Log extends Model
         'id'
     ];
 
-    public function catatan(){
-        return $this->belongsTo(Catatan::class);
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 }

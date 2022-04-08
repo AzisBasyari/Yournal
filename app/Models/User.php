@@ -34,7 +34,10 @@ class User extends Authenticatable
         return $this->hasMany(Catatan::class);
     }
 
-
+    public function log()
+    {
+        return $this->hasMany(Log::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

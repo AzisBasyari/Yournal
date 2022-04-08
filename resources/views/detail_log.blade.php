@@ -16,8 +16,8 @@
                     <div class="fs-sans">
                         <p class="card-text"><small
                                 class="text-muted">{{ date('d F Y', strtotime($log->tanggal_perjalanan)) }} |
-                                {{ date('H : i', strtotime($log->jam_perjalanan)) }} | Alamat: {{ $log->alamat }} | Suhu Tubuh:
-                                {{ $log->suhu_tubuh }}&#176;</small></p>
+                                {{ date('H : i', strtotime($log->jam_perjalanan)) }} | Suhu Tubuh:
+                                {{ $log->suhu_tubuh }}&#176; | Alamat: {{ $log->alamat }}</small></p>
                         <hr>
                         <p class="card-text text-justify">{!! $log->deskripsi !!}</p>
                     </div>
@@ -34,8 +34,8 @@
                             <div class="fs-sans">
                                 <p class="card-text"><small
                                         class="text-muted">{{ date('d F Y', strtotime($log->tanggal_perjalanan_lama)) }}
-                                        | {{ date('H : i', strtotime($log->jam_perjalanan_lama)) }} | Alamat: {{ $log->alamat_lama }} | Suhu Tubuh:
-                                        {{ $log->suhu_tubuh_lama }}&#176;</small></p>
+                                        | {{ date('H : i', strtotime($log->jam_perjalanan_lama)) }} | Suhu Tubuh:
+                                        {{ $log->suhu_tubuh_lama }}&#176; | Alamat: {{ $log->alamat_lama }}</small></p>
                                 <hr>
                                 <p class="card-text text-justify">{!! $log->deskripsi_lama !!}</p>
                             </div>
@@ -50,8 +50,8 @@
                             <div class="fs-sans">
                                 <p class="card-text"><small
                                         class="text-muted">{{ date('d F Y', strtotime($log->tanggal_perjalanan)) }} |
-                                        {{ date('H : i', strtotime($log->jam_perjalanan)) }} | Alamat: {{ $log->alamat }} | Suhu Tubuh:
-                                        {{ $log->suhu_tubuh }}&#176;</small></p>
+                                        {{ date('H : i', strtotime($log->jam_perjalanan)) }} | Suhu Tubuh:
+                                        {{ $log->suhu_tubuh }}&#176; | Alamat: {{ $log->alamat }}</small></p>
                                 <hr>
                                 <p class="card-text text-justify">{!! $log->deskripsi !!}</p>
                             </div>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-        @elseif ($log->aktivitas == 'Mengedit Catatan')
+        @elseif ($log->aktivitas == 'Menghapus Catatan')
             <h1 class="my-3">Detail Catatan Terhapus</h1>
             <div class="card shadow-lg mb-5" style="max-width: 100%;">
                 <div class="card-body">
@@ -67,8 +67,8 @@
                     <div class="fs-sans">
                         <p class="card-text"><small
                                 class="text-muted">{{ date('d F Y', strtotime($log->tanggal_perjalanan_lama)) }} |
-                                {{ date('H : i', strtotime($log->jam_perjalanan_lama)) }} | Alamat: {{ $log->alamat_lama }} | Suhu Tubuh:
-                                {{ $log->suhu_tubuh_lama }}&#176;</small></p>
+                                {{ date('H : i', strtotime($log->jam_perjalanan_lama)) }} | Suhu Tubuh:
+                                {{ $log->suhu_tubuh_lama }}&#176; | Alamat: {{ $log->alamat_lama }}</small></p>
                         <hr>
                         <p class="card-text text-justify">{!! $log->deskripsi_lama !!}</p>
                     </div>

@@ -15,7 +15,9 @@ class HomeController extends Controller
     public function main(Request $request)
     {
 
-        $logs = DB::table('logs')->where('logs.user_id', '=', Auth::id())->select('*', 'logs.updated_at as logs_updated_at')->orderBy('logs.created_at', 'desc')->paginate(5, ['*'], 'log');
+        // $logs = DB::table('logs')->where('logs.user_id', '=', Auth::id())->select('*', 'logs.updated_at as logs_updated_at')->orderBy('logs.created_at', 'desc')->paginate(5, ['*'], 'log');
+
+        $logs = Log::whereBelongsTo(auth()->user())->orderBy('created_at', 'desc')->paginate(5, ['*'], 'log');
 
         return view('main', [
             "title" => "YOURNAL",

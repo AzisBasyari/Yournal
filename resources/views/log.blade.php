@@ -28,7 +28,7 @@
                 <tr>
                     <th>{{ $no++ }}</th>
                     <td>{{ $log->aktivitas }}</td>
-                    <td>{{ date('d F Y | G : i', strtotime($log->logs_updated_at)) }}</td>
+                    <td>{{ date('d F Y | G : i', strtotime($log->updated_at)) }}</td>
                     <td>
                         <a href="/detail-log/log-{{ $log->id }}" role="button">
                             <img src="https://img.icons8.com/material-rounded/24/80B5DF/eye.png">

@@ -35,20 +35,9 @@ class Catatan extends Model
                 ->orWhere('suhu_tubuh', 'like', '%' . $search['search'] . '%');
         }
     }
-
-    // public function scopeOrder($query, array $order){
-    //     if(isset($order['filter']) && isset($order['order']) ? $order['filter'] && $order['order'] : false){
-    //         return $query->orderBy($order['filter'], $order['order']);
-    //     } else {
-    //         return $query->orderBy('created_at', 'desc');
-    //     }
-    // }
     
     public function user(){
         return $this->belongsTo(User::class);
     }
 
-    public function log(){
-        return $this->hasMany(Log::class);
-    }
 }

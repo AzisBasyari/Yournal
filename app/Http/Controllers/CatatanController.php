@@ -14,7 +14,7 @@ class CatatanController extends Controller
             'alamat' => 'required|max:255',
             'tanggal_perjalanan' => 'required',
             'jam_perjalanan' => 'required',
-            'suhu_tubuh' => 'required|max:3',
+            'suhu_tubuh' => 'required|max:10',
             'deskripsi' => 'required',
         ]);
 
@@ -47,7 +47,7 @@ class CatatanController extends Controller
             'alamat' => 'required|max:255',
             'tanggal_perjalanan' => 'required',
             'jam_perjalanan' => 'required',
-            'suhu_tubuh' => 'required|max:3',
+            'suhu_tubuh' => 'required|max:10',
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
