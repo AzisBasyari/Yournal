@@ -8239,19 +8239,6 @@ defineJQueryPlugin(Toast);
 
 /***/ }),
 
-/***/ "./resources/sass/create.sass":
-/*!************************************!*\
-  !*** ./resources/sass/create.sass ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./resources/sass/app.sass":
 /*!*********************************!*\
   !*** ./resources/sass/app.sass ***!
@@ -8278,35 +8265,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/home.sass":
-/*!**********************************!*\
-  !*** ./resources/sass/home.sass ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./resources/sass/navbar.sass":
+/***/ "./resources/sass/create.sass":
 /*!************************************!*\
-  !*** ./resources/sass/navbar.sass ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./resources/sass/header.sass":
-/*!************************************!*\
-  !*** ./resources/sass/header.sass ***!
+  !*** ./resources/sass/create.sass ***!
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -8416,12 +8377,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
-/******/ 			"css/header": 0,
-/******/ 			"css/app": 0,
-/******/ 			"css/navbar": 0,
-/******/ 			"css/home": 0,
+/******/ 			"css/create": 0,
 /******/ 			"css/index": 0,
-/******/ 			"css/create": 0
+/******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -8471,13 +8429,10 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/header","css/app","css/navbar","css/home","css/index","css/create"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/header","css/app","css/navbar","css/home","css/index","css/create"], () => (__webpack_require__("./resources/sass/app.sass")))
-/******/ 	__webpack_require__.O(undefined, ["css/header","css/app","css/navbar","css/home","css/index","css/create"], () => (__webpack_require__("./resources/sass/index.sass")))
-/******/ 	__webpack_require__.O(undefined, ["css/header","css/app","css/navbar","css/home","css/index","css/create"], () => (__webpack_require__("./resources/sass/home.sass")))
-/******/ 	__webpack_require__.O(undefined, ["css/header","css/app","css/navbar","css/home","css/index","css/create"], () => (__webpack_require__("./resources/sass/navbar.sass")))
-/******/ 	__webpack_require__.O(undefined, ["css/header","css/app","css/navbar","css/home","css/index","css/create"], () => (__webpack_require__("./resources/sass/header.sass")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/header","css/app","css/navbar","css/home","css/index","css/create"], () => (__webpack_require__("./resources/sass/create.sass")))
+/******/ 	__webpack_require__.O(undefined, ["css/create","css/index","css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/create","css/index","css/app"], () => (__webpack_require__("./resources/sass/app.sass")))
+/******/ 	__webpack_require__.O(undefined, ["css/create","css/index","css/app"], () => (__webpack_require__("./resources/sass/index.sass")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/create","css/index","css/app"], () => (__webpack_require__("./resources/sass/create.sass")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

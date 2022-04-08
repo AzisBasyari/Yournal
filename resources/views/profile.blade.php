@@ -78,7 +78,6 @@
                                 <button type="button" class="btn btn-sm p-0"><img
                                         src="https://img.icons8.com/material-rounded/24/80B5DF/hide.png"
                                         id="toggleNewPassword" /></button>
-                                {{-- <i class="bi bi-eye-slash input-group-text" id="togglePassword"></i> --}}
                             </span>
                         </div>
                     </div>
@@ -91,7 +90,6 @@
                                 <button type="button" class="btn btn-sm p-0"><img
                                         src="https://img.icons8.com/material-rounded/24/80B5DF/hide.png"
                                         id="toggleConfirmNewPassword" /></button>
-                                {{-- <i class="bi bi-eye-slash input-group-text" id="togglePassword"></i> --}}
                             </span>
                         </div>
                     </div>

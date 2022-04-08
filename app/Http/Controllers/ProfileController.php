@@ -20,9 +20,9 @@ class ProfileController extends Controller
 
         if(User::where('nik', $user->nik)->update($validatedData))
         {
-            return redirect(route('main'))->with('update-success', 'Profil Berhasil Diperbaharui!');
+            return redirect(route('main'))->with('update-success', 'Profil Berhasil Diedit!');
         } else {
-            return redirect(route('main'))->with('update-error', 'Profil Gagal Diperbaharui!');
+            return redirect(route('main'))->with('update-error', 'Profil Gagal Diedit!');
         }
     }
 
@@ -36,9 +36,9 @@ class ProfileController extends Controller
 
         if(User::where('id', auth()->user()->id)->update(['password'=>Hash::make($request->newPassword)]))
         {
-            return redirect(route('main'))->with('update-password-success', 'Kata Sandi Berhasil Diperbaharui!');
+            return redirect(route('main'))->with('update-password-success', 'Kata Sandi Berhasil Diedit!');
         } else {
-            return redirect(route('main'))->with('update-password-error', 'Kata Sandi Gagal Diperbaharui!');
+            return redirect(route('main'))->with('update-password-error', 'Kata Sandi Gagal Diedit!');
         }
         
 

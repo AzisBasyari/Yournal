@@ -36,11 +36,13 @@ class Catatan extends Model
         }
     }
 
-    public function scopeOrder($query, array $order){
-        if(isset($order['filter']) && isset($order['order']) ? $order['filter'] && $order['order'] : false){
-            return $query->orderBy($order['filter'], $order['order']);
-        }
-    }
+    // public function scopeOrder($query, array $order){
+    //     if(isset($order['filter']) && isset($order['order']) ? $order['filter'] && $order['order'] : false){
+    //         return $query->orderBy($order['filter'], $order['order']);
+    //     } else {
+    //         return $query->orderBy('created_at', 'desc');
+    //     }
+    // }
     
     public function user(){
         return $this->belongsTo(User::class);

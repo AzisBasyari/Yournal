@@ -10,11 +10,11 @@ class CatatanController extends Controller
 {
     public function store(Request $request){
         $validatedData = $request->validate([
-            'nama_tempat' => 'required',
-            'alamat' => 'required',
+            'nama_tempat' => 'required|max:255',
+            'alamat' => 'required|max:255',
             'tanggal_perjalanan' => 'required',
             'jam_perjalanan' => 'required',
-            'suhu_tubuh' => 'required',
+            'suhu_tubuh' => 'required|max:3',
             'deskripsi' => 'required',
         ]);
 
@@ -43,11 +43,11 @@ class CatatanController extends Controller
         // dd($request->all());
 
         $validatedData = $request->validate([
-            'nama_tempat' => 'required',
-            'alamat' => 'required',
+            'nama_tempat' => 'required|max:255',
+            'alamat' => 'required|max:255',
             'tanggal_perjalanan' => 'required',
             'jam_perjalanan' => 'required',
-            'suhu_tubuh' => 'required',
+            'suhu_tubuh' => 'required|max:3',
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;

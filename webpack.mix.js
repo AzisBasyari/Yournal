@@ -17,7 +17,4 @@ mix.js('resources/js/app.js', 'public/js')
     ]);
 
 mix.sass('resources/sass/index.sass', 'public/css');
-mix.sass('resources/sass/home.sass', 'public/css');
-mix.sass('resources/sass/navbar.sass', 'public/css');
-mix.sass('resources/sass/header.sass', 'public/css');
 mix.sass('resources/sass/create.sass', 'public/css');

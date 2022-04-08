@@ -137,9 +137,9 @@
                             </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-primary text-dark" data-bs-target="#register"
+                        <button type="button" class="btn btn-outline-primary text-dark rounded-pill px-5" data-bs-target="#register"
                             data-bs-toggle="modal" data-bs-dismiss="modal">Daftar</button>
-                        <button type="submit" class="btn btn-primary text-light">Masuk</button>
+                        <button type="submit" class="btn btn-primary text-light rounded-pill px-5">Masuk</button>
                     </div>
                     </form>
                 </div>
@@ -176,7 +176,6 @@
                                         <button type="button" class="btn btn-sm p-0"><img
                                                 src="https://img.icons8.com/material-rounded/24/80B5DF/hide.png"
                                                 id="togglePasswordRegister" /></button>
-                                        {{-- <i class="bi bi-eye-slash input-group-text" id="togglePassword"></i> --}}
                                     </span>
                                 </div>
                                 <span class="text-danger">*Kata sandi minimal 8 karakter</span>
@@ -190,15 +189,14 @@
                                         <button type="button" class="btn btn-sm p-0"><img
                                                 src="https://img.icons8.com/material-rounded/24/80B5DF/hide.png"
                                                 id="toggleConfirmPasswordRegister" /></button>
-                                        {{-- <i class="bi bi-eye-slash input-group-text" id="togglePassword"></i> --}}
                                     </span>
                                 </div>
                             </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-primary text-dark" data-bs-target="#login"
+                        <button type="button" class="btn btn-outline-primary text-dark rounded-pill px-5" data-bs-target="#login"
                             data-bs-toggle="modal" data-bs-dismiss="modal">Masuk</button>
-                        <button type="submit" class="btn btn-primary text-light">Daftar</button>
+                        <button type="submit" class="btn btn-primary text-light rounded-pill px-5">Daftar</button>
                     </div>
                     </form>
                 </div>
